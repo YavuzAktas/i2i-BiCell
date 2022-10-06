@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/plaintext"
+        />
+
+    <TextView
+        android:id="@+id/surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Surname"
+        android:layout_below="@id/editTextName"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextSurname"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/surname"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/plaintext"
+         />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/editTextSurname"
+        android:text="Phone Number"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/phone"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/plaintext"
+        android:inputType="phone" />
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPhone"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/email"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/plaintext"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/plaintext"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/password2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPassword2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/password2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/plaintext"
+        android:inputType="textPassword" />
+
+
+    <TextView
+        android:id="@+id/txtWarn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPassword2"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:text="SIGN UP"
+        android:background="@drawable/button"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/txtWarn"/>
+
+
+</RelativeLayout>

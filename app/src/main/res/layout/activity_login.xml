@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="0dp"
+        android:text="Phone Number"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/phone"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/plaintext"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPhone"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/plaintext"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:text="Forgot Password?"
+        android:textColor="#070707"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/saveLoginCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="1dp"
+        android:text="Remember Me"
+        android:textColor="#070707"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtWarn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saveLoginCheckBox"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/txtWarn"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button"
+        android:text="Sign In" />
+
+    <TextView
+        android:id="@+id/create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSave"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="10dp"
+        android:text="Hala kayıt olmadıysan"
+        android:textColor="#070707"
+        android:textStyle="bold" />
+
+</RelativeLayout>
