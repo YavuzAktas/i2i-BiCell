@@ -11,6 +11,6 @@ import retrofit2.http.POST;
 
 public interface IRegisterApi {
     @Headers({"Content-Type: application/json"})
-    @POST("subscribe/addSubscriber")
+    @POST("subscribe/add-sub")
     Call<RegisterRequest> register(@Body RegisterRequest registerRequest);
 }

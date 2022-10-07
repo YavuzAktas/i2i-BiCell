@@ -1,14 +1,20 @@
 package com.example.i2isystems;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.function.ToIntBiFunction;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,8 +28,12 @@ public class HomeFragment extends Fragment {
 
     private String mParam1;
     private String mParam2;
+    private String msisdn;
 
-    public HomeFragment() {
+
+    public HomeFragment()
+    {
+
     }
 
     public static HomeFragment newInstance(String param1, String param2) {
@@ -47,8 +57,19 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View v = inflater.inflate(R.layout.fragment_home, container, false);
+        Button buttonQuit = (Button) v.findViewById(R.id.buttonQuit);
 
-        return view;
+        Bundle bundle = getArguments();
+
+        msisdn = bundle.getString("msisdn");
+
+        Toast.makeText(getActivity(),msisdn, Toast.LENGTH_LONG).show();
+
+        buttonQuit.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
+            startActivity(intent);
+        });
+        return v;
     }
 }

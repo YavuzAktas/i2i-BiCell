@@ -1,12 +1,15 @@
 package com.example.i2isystems;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -29,9 +32,14 @@ public class ProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private String phone,email,name,surname;
+    private String phone,email,name,surname,msisdn;
+    LoginActivity loginActivity;
 
     public ProfileFragment() {
+    }
+
+    public ProfileFragment(String msisdn) {
+        this.msisdn = msisdn;
     }
 
     public static ProfileFragment newInstance(String param1, String param2) {
@@ -55,23 +63,35 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        View v = inflater.inflate(R.layout.fragment_profile, container, false);
+        Button buttonQuit = (Button) v.findViewById(R.id.buttonQuit);
+        buttonQuit.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
+            startActivity(intent);
+        });
 
-        EditText editTextName = view.findViewById(R.id.editTextName);
-        EditText editTextSurname = view.findViewById(R.id.editTextSurname);
-        EditText editTextPhone = view.findViewById(R.id.editTextPhone);
-        EditText editTextEmail = view.findViewById(R.id.editTextEmail);
 
-        Call<SubscriberRequest> packageInfoRequestCall = RetrofitClientInstance.getSubscriber().subscriber();
+        EditText editTextName = v.findViewById(R.id.editTextName);
+        EditText editTextSurname = v.findViewById(R.id.editTextSurname);
+        EditText editTextPhone = v.findViewById(R.id.editTextPhone);
+        EditText editTextEmail = v.findViewById(R.id.editTextEmail);
+
+        loginActivity = new LoginActivity();
+        Toast.makeText(getActivity(),loginActivity.msisdn(),Toast.LENGTH_LONG).show();
+
+        SubscriberRequest subscriberRequest = new SubscriberRequest();
+        subscriberRequest.setMsisdn("12345679812");
+
+        Call<SubscriberRequest> packageInfoRequestCall = RetrofitClientInstance.getSubscriber().subscriber("12345679812");
         packageInfoRequestCall.enqueue(new Callback<SubscriberRequest>() {
             @Override
             public void onResponse(Call<SubscriberRequest> call1, Response<SubscriberRequest> response1) {
                 if(response1.isSuccessful()){
-                    SubscriberRequest subscriberRequest = response1.body();
-                    phone =subscriberRequest.getMsisdn();
-                    email = subscriberRequest.getEmail();
-                    name = subscriberRequest.getName();
-                    surname = subscriberRequest.getSurname();
+                    SubscriberRequest subscriberRequest1 = response1.body();
+                    phone = subscriberRequest1.getMsisdn();
+                    email = subscriberRequest1.getEmail();
+                    name = subscriberRequest1.getName();
+                    surname = subscriberRequest1.getSurname();
                 }
             }
             @Override
@@ -84,7 +104,6 @@ public class ProfileFragment extends Fragment {
         editTextName.setText(name);
         editTextPhone.setText(phone);
         editTextSurname.setText(surname);
-        Toast.makeText(getActivity(),phone,Toast.LENGTH_LONG).show();
-        return view;
+        return v;
     }
 }

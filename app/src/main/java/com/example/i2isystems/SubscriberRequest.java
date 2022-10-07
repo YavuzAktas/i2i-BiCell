@@ -13,7 +13,7 @@ public class SubscriberRequest {
     @SerializedName("email")
     @Expose
     String email;
-    @SerializedName("MSISDN")
+    @SerializedName("msisdn")
     @Expose
     String msisdn;
     public String getName() {

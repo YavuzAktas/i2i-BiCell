@@ -1,6 +1,7 @@
 package com.example.i2isystems;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,15 +22,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         replaceFragment(new HomeFragment());
 
+
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId())
             {
                 case R.id.home:
                     replaceFragment(new HomeFragment());
-                    break;
-                case R.id.phonePackage:
-                    replaceFragment(new PhonePackageFragment());
                     break;
                 case R.id.profile:
                     replaceFragment(new ProfileFragment());

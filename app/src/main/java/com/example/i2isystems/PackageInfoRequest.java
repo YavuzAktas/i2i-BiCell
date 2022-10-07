@@ -27,7 +27,6 @@ public class PackageInfoRequest {
     @SerializedName("packageName")
     @Expose
     String packageName;
-
     @SerializedName("duration")
     @Expose
     int duration;

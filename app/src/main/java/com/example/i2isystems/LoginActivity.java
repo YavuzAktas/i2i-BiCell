@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -83,6 +85,13 @@ public class LoginActivity extends AppCompatActivity {
                         public void onResponse(Call<LoginRequest> call, Response<LoginRequest> response) {
                             if (response.isSuccessful()) {
                                 LoginRequest loginRequest = response.body();
+
+                                Bundle bundle = new Bundle();
+                                bundle.putString("msisdn",editPhone);
+                                HomeFragment homeFragment = new HomeFragment();
+                                homeFragment.setArguments(bundle);
+
+
                                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
                             } else {
                                 txtWarn.setText("Kullanıcı adı veya şifre hatalı");
@@ -126,6 +135,11 @@ public class LoginActivity extends AppCompatActivity {
 
         });
 
+    }
+
+    public String msisdn()
+    {
+        return editPhone;
     }
 
 }
