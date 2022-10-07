@@ -12,8 +12,8 @@ public class VoltDb{
     private Logger log = LogManager.getLogger(VoltDb.class);
 
     public VoltDb(){
-        // id and port number implementation from rumeysa
-        //this.
+        this.id = "34.173.48.229";
+        this.port = 49175;
         log.info("VoltDb constructor");
         try {
             this.client=get_ClientVoltDB();

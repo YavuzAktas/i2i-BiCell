@@ -1,7 +1,15 @@
-C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\parsexml\parseXml.java
+C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\kafka\src\main\java\org\example\modul\UsageMessage.java
+C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\kafka\src\main\java\org\example\modul\UsageMessageConsumer.java
+C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\kafka\src\main\java\org\example\Main.java
+C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\kafka\src\main\java\org\example\modul\SeriliazeUsageMessage.java
 C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\operations\operations.java
-C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\VoltDb\VoltDb.java
 C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\listenAkka\Listener.java
+C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\kafka\src\main\java\org\example\modul\UsageMessageProducer.java
+C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\parsexml\parseXml.java
+C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\kafka\src\main\java\org\example\kafkaMethods\producerConsumer.java
+C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\kafka\src\main\java\org\example\configuration\IKafkaConfiguration.java
+C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\VoltDb\VoltDb.java
+C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\kafka\src\main\java\org\example\modul\DeseriliazeUsageMessage.java
 C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\Message\Message.java
 C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\price\price.java
 C:\Users\e.kabalci2018\IdeaProjects\OCS\src\main\java\com\i2i\bicell\App.java

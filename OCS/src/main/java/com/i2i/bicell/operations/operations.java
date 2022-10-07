@@ -4,7 +4,7 @@ import java.util.Date;
 import com.i2i.bicell.VoltDb.VoltDb;
 import org.apache.logging.log4j.*;
 import com.i2i.bicell.Message.Message;
-import com.i2i.bicell.kafka.src.*;
+import com.i2i.bicell.kafka.src.main.java.org.example.modul.UsageMessage;
 
 public class operations{
     private Logger log = LogManager.getLogger(operations.class);
@@ -55,7 +55,7 @@ public class operations{
         kafkaUsageMessage.setBlc_voice(blc_voice);
         kafkaUsageMessage.setBlc_sms(blc_sms);
         kafkaUsageMessage.setBlc_data(blc_data);
-        kafkaUsageMessage.set_Price(price);
+        kafkaUsageMessage.setPrice(price);
 
         return kafkaUsageMessage;
     }
